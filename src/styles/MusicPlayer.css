@@ -1,0 +1,147 @@
+.MusicPlayer{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.SongImage{
+    width: 75px;
+    bottom: 0;
+    margin-left: 10px;
+    min-height: 75px;
+    height: 75px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.SongImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.SongAttributes{
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.SongAttributes .top,
+.SongAttributes .bottom {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+
+}
+
+
+.SongAttributes .top,
+.SongAttributes .middle,
+.SongAttributes .right{
+    color: #595959;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+.SongAttributes  .top .middle {
+    display: flex;
+    font-size: 16px;
+}
+
+.SongAttributes  .top .middle .back .backward{
+    margin-right: 20px;
+}
+.SongAttributes  .top .middle .forward .next{
+    margin-right: 20px;
+}
+.SongAttributes  .top .left{
+   display: flex;
+   position: relative;
+
+}
+.SongAttributes  .top .left .download{
+   margin-left: 20px;
+}
+
+.SongAttributes .bottom .curretTime{
+    margin-left: 20px;
+}
+.SongAttributes .bottom .duration{
+    margin-right: 20px;
+}
+
+
+.SongAttributes .top .left .loved i{
+    color: #49e12e !important;
+    filter: drop-shadow(0px 0px 2px #49e12e);
+
+}
+
+.SongAttributes .top .middle .back i:nth-child(2),
+.SongAttributes .top .middle .forward i:nth-child(1){
+    color: #9a9a9a;
+}
+
+.SongAttributes .top .middle .playPause{
+   font-size: 40px;
+   margin-left: 15px;
+   margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+}
+
+
+   
+
+.SongAttributes .bottom .progressBar{
+    width: 78%;
+    position: relative;
+    height: 5px;
+    outline: none;
+    border: none;
+    appearance: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.SongAttributes .bottom .progressBar:before{
+    position: absolute;
+    content: "";
+    top:0px;
+    left: 0px;
+    background: #49e12e;
+    width: var(--played-width);
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.SongAttributes .bottom .progressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.SongAttributes .bottom .curretTime,
+.SongAttributes .bottom .duration{
+    color: #f1f1f1;
+    font-size: 12px;
+    font-weight: bold;
+}

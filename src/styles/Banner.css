@@ -1,0 +1,78 @@
+.Banner{
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.Banner .BannerImg{
+    position: absolute;
+    font-size:  200px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+.profile{
+    position:fixed;
+    right:20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    border-radius: 100px;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+
+}
+.picsart{
+font-size: 10px;
+
+}
+
+.profile h4{
+    color: white;
+    margin-left: 10px;
+
+
+}
+
+.playbutton {
+    z-index: 2;
+    margin-left: 45px;
+    margin-top: 230px;
+    position: absolute;
+    display: flex;
+    color: #f1f1f1;
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+    font-size: 7px;
+    align-items: center;
+    background-color: #49e12e;
+    border-radius: 60px;
+    letter-spacing: 1px;
+    
+}
+
+.playbutton >h2 {
+    padding-left: 18px;
+}
+.Favorite {
+    position: absolute;
+    color: white;
+    font-size: 33px;
+    font-weight: 200;
+    margin-left: 165px;
+    margin-top: 226px;
+}
+.Share {
+    position: absolute;
+    color: white;
+    font-size: 27px;
+    margin-left: 215px;
+    margin-top: 230px;
+}
+
+

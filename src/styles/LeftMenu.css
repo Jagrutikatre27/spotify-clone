@@ -1,0 +1,264 @@
+.LeftMenu{
+
+    width: 280px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    min-height: 100vh;
+    background: #121212;
+    backdrop-filter: blur(10px);
+    padding: 20px 15px;
+    overflow: hidden;
+    transition: all 0.3 cubic-bezier(0.175,0.885,0.32,1.275);
+    font-family: 'Poppins', sans-serif;
+}
+
+.LeftMenu .logoContainer{
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.LeftMenu .logoContainer i {
+    font-size: 30px;}
+
+    .LeftMenu .logoContainer i:nth-of-type(2){
+        font-size: 20px;}
+
+        .LeftMenu .logoContainer h2 {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+            .searchBox {
+                width: 100%;
+                height: 40px;
+                position: relative;
+                margin-top: 17px;
+                color: #848484;
+                overflow: hidden;
+                border-radius: 7px;
+                /* box-shadow: 0px 0px 20px rgba(5, 5, 5, 0.4) */
+              }
+              .searchBox input {
+                 width: 100%;
+                 height: 100%;
+                 outline: none;
+                 border: none;
+                 background: rgba(0, 0, 0, 0.3);
+                 padding-left: 45px;
+                 color: #f1f1f1;
+                 font-size: 14px;
+                 font-weight: bold;
+                }        
+               .searchBox .searchIcon {
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   color: #f1f1f1;
+                   width: 45px;
+                   height: 45px;
+                   text-align: center;
+                   line-height: 45px;
+                   font-size: 20px;
+               } 
+
+               .MenuContainer {
+                   margin: 20px 0;
+               }
+               .MenuContainer .title {
+                   color: whitesmoke;
+                   font-size: 15px;
+                   font-weight: bold;
+                   margin-bottom: 16px;
+                   text-transform: uppercase;
+               }
+               .MenuContainer ul {
+                   width: 100%;
+                   padding: 0;
+               }
+
+               .MenuContainer ul li {
+                   list-style: none;
+                   margin: 5px 0;
+                   width: 100%;
+                   padding: 4px 0px;
+                   position: relative;
+               }
+
+               .MenuContainer ul li a{
+                   text-decoration: none;
+                   color: #848484;
+                   display: flex;
+                   align-items: center;
+                   font-size: 16px;
+               }
+               .MenuContainer ul li a i{
+                   font-size: 15px;
+                   margin-right: 17px;
+               }
+
+               .MenuContainer ul li:before{
+                   position: absolute;
+                   content: "";
+                   top: 0;
+                   left: -15px;
+                   width: 0px;
+                   height: 100%;
+                   background: #49e12e;
+                   border-radius: 5px;
+               } 
+                
+                .MenuContainer ul li:hover::before,
+               .MenuContainer ul li.active::before{
+                   width: 5px;
+                   transition: 0.3s;
+               } 
+
+               .MenuContainer ul li:hover a,
+               .MenuContainer ul li.active a{
+                   color: #f1f1f1;
+                   left: 0;
+                   transition: 0.3s;
+               } 
+
+               .PlayListContainer {
+                   cursor: pointer;
+                   margin: 17px 0;
+               }
+
+               .PlayListContainer .nameContainer{
+                   display: flex;
+                   justify-content: space-between;
+                   align-items: center;
+                   color: whitesmoke;
+                   margin-bottom: 9px;
+                   font-size: 15px;
+                   font-weight: bold;
+                   text-transform: uppercase;
+                   
+               }
+               .PlayListContainer .nameContainer i{
+                   cursor: pointer;
+                   color: white;
+               }
+
+               .PlayListContainer .PlayListScroll{
+                   height: 140px;
+                   overflow-x: hidden;
+                   overflow-y: none;
+                   position: relative;
+                   scrollbar-width: none;
+                   
+                }
+
+               .PlayListContainer .PlayListScroll .PlayList{
+                   display: flex;
+                   align-items: center;
+                   color: #848484;
+                   margin: 7px 0;
+               }
+
+               .PlayListContainer .PlayListScroll .PlayList:hover{
+                   color: #f1f1f1;
+                   transition: 0.3s;
+               }
+
+               .PlayListContainer .PlayListScroll .PlayList i{
+                   font-size: 18px;
+               }
+
+
+               .PlayListContainer .PlayListScroll .PlayList .list{
+                   margin-right: 15px;
+               }
+
+               .PlayListContainer .PlayListScroll .PlayList .trash{
+                   margin-left: auto;
+               }
+
+               .PlayListContainer .PlayListScroll .PlayList p{
+                   font-size: 16px;
+                   text-overflow: ellipsis;
+                   overflow: hidden;
+                   display: inline;
+               }
+
+                .TrackList .bottom{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 20px;
+                    color: #848484;
+                }
+               
+                .TrackList .bottom i:hover{
+                    color: #f1f1f1;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    
+                }
+
+                .TrackList .bottom input{
+                    position: relative;
+                    height: 5px;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    background: rgba(255, 255, 255, 0.1);
+                    appearance: none;
+                }
+
+                .TrackList .bottom input::before{
+                    position: absolute;
+                    content: "";
+                    
+                    background: #49e12e;
+                    width: 50%;
+                    height: 100%;
+                    border-radius: 10px;
+                     z-index: 2; 
+                    transition: width 250ms linear;
+                }
+
+                .TrackList .bottom input::-webkit-slider-thumb{
+                  -webkit-appearance: none;
+                    background: #49e12e;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    position: relative;
+                     z-index: 2; 
+                    transition: width 250ms linear;
+                }
+
+                @media screen and (max-width: 550px) {
+                    .LeftMenu{
+                        width: 6px;
+                        min-height: 64px;
+                    }
+                    .LeftMenu .searchBox{
+                        display: none;
+                    }
+                    .LeftMenu .TrackList{
+                        display: none;
+                    }
+                    .LeftMenu .PlayListContainer{
+                        display: none;
+                    }
+                    .LeftMenu .MenuContainer ul li a span{
+                        display: none;
+                    }
+                    .LeftMenu .MenuContainer ul li a i{
+                        font-size: 26px;
+                    }
+                    .LeftMenu .MenuContainer ul li{
+                        margin: 25px 0;
+                    }
+                    
+
+
+                }
+                

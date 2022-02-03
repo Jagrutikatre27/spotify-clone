@@ -1,0 +1,184 @@
+.MainContainer{
+    height: 70vh;
+    margin-left: 280px;
+    z-index: 1;
+    flex-grow: 1;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+ .MenuList{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: #131111;
+
+}
+
+.MenuList ul{
+    display: flex;
+    align-items: center;
+}
+
+.MenuList ul li{
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+
+.MenuList ul li a{
+    text-decoration: none;
+    color: #848484;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.MenuList ul li::before{
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    left: 10px;
+    width: 0px;
+    height: 4px;
+    border-radius: 4px;
+    background: #f1f1f1;
+}
+
+.MenuList ul li:hover::before,
+.MenuList ul li:active::before{
+    width: 20px;
+    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.MenuList ul li:hover a,
+.MenuList ul li:active a{
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.MenuList p{
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.MenuList p i{
+    margin-right: 6px;
+    font-size: 12px;
+}
+
+.MenuList p span{
+    font-size: 12px;
+    text-align: center;
+    color: #848484;
+    margin-left: 6px;
+}
+
+.AudioList{
+    padding: 10px 30px;
+
+}
+.AudioList .Title{
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.AudioList .Title span{
+    color: #848484;
+    font-size: 12px;
+}
+
+.SongsContainer{
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+.Songs{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #848484;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    
+}
+
+.Songs:hover,
+.Songs:active{
+    color: #f1f1f1;
+    transition: 0.3s;
+    
+
+}
+
+.Count{
+   margin-right: 10px;
+}
+
+.Song{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+
+}
+
+.Song .ImgBox{
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 0.5em;
+    background: #555;
+    margin-right: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+
+}
+
+.Song .ImgBox Img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.Song .Section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Song .Section .SongName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.Song .Section .Hits{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+}
+.Song .Section .Hits .Hit,
+.Song .Section .Hits .Duration{
+    margin-right: 15px;
+}
+
+.Song .Section .Hits .Hit i,
+.Song .Section .Hits .Duration i{
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.Song .Section .Hits .Favourite i{
+    color: #49e12e;
+    filter: drop-shadow(0px 0px 2px #49e12e);
+}
+
